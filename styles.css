@@ -1,0 +1,54 @@
+/* Set full height and remove default margins */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for centering the content */
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px; /* Prevents content from touching screen edges on small devices */
+}
+
+/* Styling for the image placeholder */
+.image-placeholder {
+    width: 836px;
+    height: 461px;
+    border: 5px solid white; /* White border - NOW 5px */
+}
+
+/* Styling for the "She lies..." text */
+.subtitle {
+    color: black; /* Black text */
+    margin-top: 10px; /* Space between image and text */
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+/* Styling for the bottom text */
+.footer {
+    margin-top: 20px; /* Space between subtitle and footer */
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Styling for the clickable link */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #ff0000; /* Turns red when hovered */
+}
