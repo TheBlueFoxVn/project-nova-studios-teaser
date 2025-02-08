@@ -15,5 +15,29 @@
             <a href="https://thebluefoxvn.itch.io/exodus-fvn" target="_blank">Go to Exodus page</a>
         </div>
     </div>
+    
+    <!-- Audio element added at the end of body -->
+    <audio id="background-audio" loop preload="auto">
+        <source src="null.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- JavaScript for audio control -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById('background-audio');
+            
+            function playAudio() {
+                audio.play().catch(error => {
+                    document.body.addEventListener('click', function triggerAudio() {
+                        audio.play();
+                        document.body.removeEventListener('click', triggerAudio);
+                    });
+                });
+            }
+
+            playAudio();
+        });
+    </script>
 </body>
 </html>
