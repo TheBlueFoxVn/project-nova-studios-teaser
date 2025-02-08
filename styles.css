@@ -24,6 +24,16 @@ html, body {
     width: 836px;
     height: 461px;
     border: 5px solid white; /* White border - NOW 5px */
+    /* Optional: Hide any overflow if needed */
+    overflow: hidden;
+}
+
+/* New rule to ensure the image fits the placeholder */
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjusts image to cover the container */
+    display: block; /* Removes extra bottom spacing */
 }
 
 /* Styling for the "She lies..." text */
