@@ -9,37 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-placeholder">
-            <img src="placeholder.png" alt="Teaser Image">
+        <div class="image-placeholder" id="image-container">
+            <img src="placeholder.png" alt="Teaser Image" id="dynamic-image">
+            <button id="close-image" style="display: none;">X</button>
         </div>
-        <div class="subtitle"> </div>
+        <input type="text" id="unified-input" placeholder="Enter word or code here">
+        <button id="submit-input">Enter</button>
+        <p id="result-output"></p>
         <div class="footer">
             <a href="https://thebluefoxvn.itch.io/exodus-fvn" target="_blank">Go to Exodus page</a>
         </div>
     </div>
     
-    <!-- Audio element added at the end of body -->
+    <!-- Audio element -->
     <audio id="background-audio" loop preload="auto">
         <source src="null.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
-    <!-- JavaScript for audio control -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var audio = document.getElementById('background-audio');
-            
-            function playAudio() {
-                audio.play().catch(error => {
-                    document.body.addEventListener('click', function triggerAudio() {
-                        audio.play();
-                        document.body.removeEventListener('click', triggerAudio);
-                    });
-                });
-            }
-
-            playAudio();
-        });
-    </script>
+    <!-- JavaScript for functionality -->
+    <script src="script.js"></script>
 </body>
 </html>
